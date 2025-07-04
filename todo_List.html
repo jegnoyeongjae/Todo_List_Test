@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo_List</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+    <div id="wrapper">
+      <h2>TODO LIST</h2>
+      <div class="todoForm">
+        <input
+          type="text"
+          placeholder="할 일을 입력해주세요."
+          id="todoInput"
+          name="todoInput"
+        />
+        <button id="addBtn">추가</button>
+      </div>
+      <div class="todoList">
+        <ul id="todoList"></ul>
+      </div>
+      <div id="todo-total">
+        <span>할일 총합: <span id="todo-count">0</span> 개</span>
+      </div>
+    </div>
+    <!-- 템플릿 -->
+    <template id="todo-template">
+      <li>
+        <div class="left">
+          <input type="checkbox" name="checkDone" class="checkDone" />
+          <p class="content"></p>
+        </div>
+        <div class="right">
+          <span class="date"></span>
+          <button class="updateBtn">수정</button>
+          <button class="removeBtn">삭제</button>
+        </div>
+      </li>
+    </template>
+    <!-- 모달창 -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="clsoe-modal"> 
+          <span class="closeBtn">&times;</span>
+        </div>
+      
+        <div class="innerContent">
+          <div id="modal-StartEnd">
+            <div>
+              <label for="startDate">시작일</label>
+              <input type="date" id="startDate" />
+            </div>
+            <div>
+              <label for="endDate">마감일</label>
+              <input type="date" id="endDate" />
+            </div>
+          </div>
+          <div class="content-text">
+            <p id="modalText">여기에 내용을 넣습니다</p>
+          </div>
+          <div>
+            <label for="modal-rank-select">중요도</label>
+            <select id="modal-rank-select">
+              <option value="1">1 (매우 중요)</option>
+              <option value="2">2 (중간)</option>
+              <option value="3">3 (낮음)</option>
+            </select>
+          </div>
+          <div>
+             <button id="saveBtn">완료</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/test03.js"></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+#todoList .done .content,
+#todoList .done .date {
+  text-decoration: line-through;
+}
+button {
+  width: 45px;
+  height: 30px;
+}
+h2 {
+  text-align: center;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d1d1d1;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 0;
+  width: 100%;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#wrapper {
+  margin: 0 10%;
+}
+
+#todoList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.todoForm {
+  text-align: center;
+}
+
+.left {
+  display: flex;
+  width: 75%;
+  gap: 15px;
+}
+.right {
+  display: flex;
+  gap: 10px;
+}
+
+/* 모달 css */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  width: 80vh;
+  height: 80vh;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.hidden {
+  display: none;
+}
+.closeBtn {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.clsoe-modal {
+  height: 30px;
+}
+
+.innerContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+.content-text {
+  width: 70%;
+  height: 70%;
+}
+
+#modalText {
+  height: 100% !important;
+  white-space: pre-wrap !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+}
+#modalText[contenteditable='true'] {
+  background-color: #e2e3f3; /* 기본 배경색 */
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 80px;
+  cursor: text;
+  transition: background-color 0.3s ease;
+}
+
+#todo-total {
+  text-align: center;
+}
+
+#modal-StartEnd {
+  display: flex;
+  gap: 40px;
+}
